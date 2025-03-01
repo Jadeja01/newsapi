@@ -1,3 +1,3 @@
-General purpose news api for own website.
+-> General purpose news api for own website.
 
-Just for testing and practise.
+-> Just for testing and practise.
