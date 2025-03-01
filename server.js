@@ -1,18 +1,26 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const routes = require("./routes/newsRoutes.js");
+const general = require("./routes/general.js");
+const business = require("./routes/business.js");
+const sports = require("./routes/sports.js");
+const science = require("./routes/science.js");
+const entertainment = require("./routes/entertainment.js");
 
 const app = express();
 
 // Middleware
 app.use(express.json());
 app.use(cors());
-app.use("/api/news", routes);
+app.use("/api/general", general);
+app.use("/api/sports", sports);
+app.use("/api/entertainment", entertainment);
+app.use("/api/science", science);
+app.use("/api/business", business);
 
 // Sample Route
 app.get("/", (req, res) => {
-    res.send("Welcome to My Express API!");
+    res.send("<h1>Welcome to My News API!</h1>");
 });
 
 // Start Server
