@@ -6,6 +6,7 @@ const business = require("./routes/business.js");
 const sports = require("./routes/sports.js");
 const science = require("./routes/science.js");
 const entertainment = require("./routes/entertainment.js");
+const health = require("./routes/health.js");
 
 const app = express();
 
