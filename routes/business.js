@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const paginate = require("../middleware/pagination.js");
 
 // Sample News Data
 const news = [
@@ -25,10 +26,14 @@ const news = [
   { id: 20, title: "Investment Strategies for 2025", description: "Experts share their top investment tips for the coming year.", imageUrl: "https://example.com/investment-strategies.jpg", articleUrl: "https://example.com/business-news20" }
 ];
 
+router.use((req, res, next) => {
+  res.locals.news = news;
+  next();
+});
 
 // Get All News
-router.get("/", (req, res) => {
-    res.json(news);
+router.get("/",paginate, (req, res) => {
+    res.json(res.locals.paginatedNews);
 });
 
 module.exports = router;

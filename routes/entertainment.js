@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const paginate = require("../middleware/pagination.js");
 // Sample News Data
 const news = [
   { id: 1, title: "Blockbuster Movie Breaks Box Office Records", description: "A new blockbuster movie has set records at the box office.", imageUrl: "https://example.com/movie.jpg", articleUrl: "https://example.com/entertainment-news1" },
@@ -25,9 +25,14 @@ const news = [
   { id: 20, title: "Celebrity Chef Launches New Cooking Show", description: "A famous chef is bringing their expertise to a new TV series.", imageUrl: "https://example.com/cooking-show.jpg", articleUrl: "https://example.com/entertainment-news20" }
 ];
 
+router.use((req, res, next) => {
+  res.locals.news = news;
+  next();
+});
+
 // Get All News
-router.get("/", (req, res) => {
-    res.json(news);
+router.get("/",paginate, (req, res) => {
+    res.json(res.locals.paginatedNews);
 });
 
 module.exports = router;

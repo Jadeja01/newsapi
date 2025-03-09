@@ -1,4 +1,5 @@
 const express = require("express");
+const paginate = require("../middleware/pagination");
 const router = express.Router();
 
 
@@ -26,9 +27,14 @@ const news = [
     { id: 20, title: "Advancements in Diabetes Treatment", description: "New insulin therapies and technology are improving diabetes management.", imageUrl: "https://example.com/diabetes.jpg", articleUrl: "https://example.com/health-news20" }
 ];
 
+router.use((req,res,next)=>{
+    res.locals.news = news;
+    next();
+})
+
 // Get All News
-router.get("/", (req, res) => {
-    res.json(news);
+router.get("/",paginate, (req, res) => {
+    res.json(res.locals.paginatedNews);
 });
 
 module.exports = router;
