@@ -17,6 +17,7 @@ app.use("/api/sports", sports);
 app.use("/api/entertainment", entertainment);
 app.use("/api/science", science);
 app.use("/api/business", business);
+app.use("/api/health", health);
 
 // Sample Route
 app.get("/", (req, res) => {
