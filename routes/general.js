@@ -23,7 +23,7 @@ const news = [
   { id: 18, title: "AI Integration in Daily Life Expands Rapidly", description: "Artificial intelligence is now more present in daily activities than ever.", imageUrl: "https://example.com/ai-integration.jpg", articleUrl: "https://example.com/general-news18" },
   { id: 19, title: "Rising Housing Costs Impact Urban Populations", description: "The cost of living continues to increase in major cities.", imageUrl: "https://example.com/housing.jpg", articleUrl: "https://example.com/general-news19" },
   { id: 20, title: "Wildlife Conservation Efforts See Success", description: "Some endangered species are making a comeback.", imageUrl: "https://example.com/conservation.jpg", articleUrl: "https://example.com/general-news20" }
-],
+];
 
 
 // Get All News

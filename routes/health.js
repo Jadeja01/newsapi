@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+
 // Sample News Data
 const news = [
     { id: 1, title: "New Breakthrough in Cancer Research", description: "Scientists have made a major breakthrough in cancer treatment.", imageUrl: "https://example.com/cancer-research.jpg", articleUrl: "https://example.com/health-news1" },
@@ -23,9 +24,7 @@ const news = [
     { id: 18, title: "The Science Behind Longevity", description: "Researchers explore the secrets to living longer, healthier lives.", imageUrl: "https://example.com/longevity.jpg", articleUrl: "https://example.com/health-news18" },
     { id: 19, title: "How Social Connections Affect Mental Health", description: "Strong social relationships are key to mental well-being.", imageUrl: "https://example.com/social-health.jpg", articleUrl: "https://example.com/health-news19" },
     { id: 20, title: "Advancements in Diabetes Treatment", description: "New insulin therapies and technology are improving diabetes management.", imageUrl: "https://example.com/diabetes.jpg", articleUrl: "https://example.com/health-news20" }
-],
-
-  
+];
 
 // Get All News
 router.get("/", (req, res) => {

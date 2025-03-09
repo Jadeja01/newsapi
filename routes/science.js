@@ -23,8 +23,7 @@ const news = [
   { id: 18, title: "Microplastic Pollution Found in Human Blood", description: "New research reveals the widespread presence of microplastics in human bodies.", imageUrl: "https://example.com/microplastic.jpg", articleUrl: "https://example.com/science-news18" },
   { id: 19, title: "Breakthrough in Renewable Energy Storage", description: "A new energy storage method could make renewables more viable.", imageUrl: "https://example.com/renewable.jpg", articleUrl: "https://example.com/science-news19" },
   { id: 20, title: "Lunar Ice Could Support Future Moon Missions", description: "Scientists confirm the presence of ice on the Moon, crucial for future exploration.", imageUrl: "https://example.com/lunar-ice.jpg", articleUrl: "https://example.com/science-news20" }
-]
-  ;
+];
 
 // Get All News
 router.get("/", (req, res) => {

@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 // Sample News Data
-const news = const sportsNews = [
+const news = [
   { id: 1, title: "Champions League Final Set for Showdown", description: "The two top teams face off in the final match of the Champions League.", imageUrl: "https://example.com/champions-league.jpg", articleUrl: "https://example.com/sports-news1" },
   { id: 2, title: "Olympics 2025: What to Expect", description: "The upcoming Olympics are set to showcase the world's best athletes.", imageUrl: "https://example.com/olympics.jpg", articleUrl: "https://example.com/sports-news2" },
   { id: 3, title: "Tennis Star Wins Grand Slam Title", description: "A rising tennis star claims victory in a stunning final match.", imageUrl: "https://example.com/tennis.jpg", articleUrl: "https://example.com/sports-news3" },
